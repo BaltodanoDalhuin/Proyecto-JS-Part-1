@@ -1,12 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('login-form');
+    var errorMessage = document.getElementById('error-message');
 
-    event.preventDefault();
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
 
-    console.log("Nombre: " + nombre);
-    console.log("Apellido: " + apellido);
-    console.log("Correo Electrónico: " + email);
-    console.log("Contraseña: " + password);
+        if (username.trim() === '' || password.trim() === '') {
+            errorMessage.textContent = 'Por favor, completa todos los campos.';
+        } else {
+            var userData = {
+                username: username,
+                password: password
+            };
+
+            localStorage.setItem('userData', JSON.stringify(userData));
+
+            alert('¡Registro exitoso para usuario: ' + username);
+
+        
+            errorMessage.textContent = '';
+
+        }
+    });
+});
