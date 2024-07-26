@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (userExists) {
-            errorMessage.textContent = "Iniciaste seccion.";
+            errorMessage.textContent = "El correo ya está registrado.";
             return;
         }
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem("users", JSON.stringify(users));
 
-        alert("¡Inicio con exitoso para el usuario: " + "!");
+        alert("¡Registro exitoso para usuario: " + "!");
 
         errorMessage.textContent = "";
         form.reset();
