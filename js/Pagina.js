@@ -1,4 +1,4 @@
-.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const eventForm = document.getElementById('eventForm');
     const taskForm = document.getElementById('taskForm');
     const eventList = document.getElementById('eventList');
@@ -31,7 +31,7 @@
 
     function createEventElement(event) {
         const li = document.createElement('li');
-        li.textContent = ${event.title};
+        li.textContent = event.title;
         const buttonContainer = document.createElement('div');
         buttonContainer.classList.add('button-container');
         const editBtn = document.createElement('button');
@@ -52,7 +52,7 @@
 
     function createTaskElement(task) {
         const li = document.createElement('li');
-        li.textContent = ${task.title};
+        li.textContent = task.title;
         const buttonContainer = document.createElement('div');
         buttonContainer.classList.add('button-container');
         const editBtn = document.createElement('button');
@@ -75,7 +75,7 @@
         const newTitle = prompt('Nuevo título del evento:', event.title);
         if (newTitle) {
             event.title = newTitle;
-            li.firstChild.textContent = ${event.title};
+            li.firstChild.textContent = event.title;
             updateLocalStorage('events', event);
         }
     }
@@ -84,7 +84,7 @@
         const newTitle = prompt('Nuevo título de la tarea:', task.title);
         if (newTitle) {
             task.title = newTitle;
-            li.firstChild.textContent = ${task.title};
+            li.firstChild.textContent = task.title;
             updateLocalStorage('tasks', task);
         }
     }
