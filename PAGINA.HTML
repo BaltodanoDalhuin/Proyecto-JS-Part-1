@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de Tareas y Eventos</title>
-    <link rel="stylesheet" href="css/PAGINA.CSS">
+    <title>Gestión de Eventos y Tareas</title>
+    <link rel="stylesheet" href="/css/PAGINA.CSS">
 </head>
 <body>
-    <div class="container">
-        <h1>Agenda de Tareas</h1>
-        <div class="form-container">
-            <input type="text" id="task-input" placeholder="Añadir nueva tarea o evento">
-            <button id="add-button">Añadir</button>
-            <button id="add-button">Eliminar</button>
-            <button id="add-button">Editar</button>
-        </div>
-        <ul id="task-list"></ul>
-    </div>
+    <h1>Gestión de Eventos y Tareas</h1>
+    <div id="administration">
+        <h2>Crear Evento</h2>
+        <form id="eventForm">
+            <input type="text" id="eventTitle" placeholder="Título del Evento" required>
+            <button type="submit">Agregar Evento</button>
+        </form>
 
-    <div class="container">
-        <h1>Agenda de Eventos</h1>
-        <div class="form-container">
-            <input type="text" id="task-input" placeholder="Añadir nueva tarea o evento">
-            <button id="add-button">Añadir</button>
-            <button id="add-button">Eliminar</button>
-            <button id="add-button">Editar</button>
-        </div>
-        <ul id="task-list"></ul>
+        <h2>Crear Tarea</h2>
+        <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Título de la Tarea" required>
+            <button type="submit">Agregar Tarea</button>
+        </form>
+
+        <h2>Eventos</h2>
+        <ul id="eventList"></ul>
+
+        <h2>Tareas</h2>
+        <ul id="taskList"></ul>
     </div>
     <script src="/js/Pagina.js"></script>
 </body>
