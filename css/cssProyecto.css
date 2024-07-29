@@ -19,7 +19,7 @@ body {
   width: 100%;
   max-width: 400px;
   text-align: center;
-  border: 1px solid gold;
+  border: 1px solid black;
 }
 
 /* Formulario */
@@ -52,16 +52,16 @@ input[type="password"] {
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 16px;
-  border: 1px solid gold;
+  border: 1px solid ;
   animation: change-fondo 5s alternate infinite;
 }
 
 @keyframes change-fondo {
-  0%{border: 2px solid pink;}
-  25%{border: 2px solid red;}
-  50%{border: 2px solid blue;}
-  75%{border:2px solid  green;}
-  100%{border: 2px solid violet;}
+  0%{border: 2px solid black;}
+  25%{border: 2px solid white;}
+  50%{border: 2px solid black;}
+  75%{border:2px solid white;}
+  100%{border: 2px solid black;}
 }
 
 
@@ -148,7 +148,7 @@ body {
 
 /* Logo */
 .navbar .logo img {
-  height: 100px;
+  height: 115px;
 }
 
 /* Enlaces de navegación */
@@ -206,5 +206,42 @@ body {
 
   .menu-toggle {
       display: flex;
+  }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+  body {
+      background-color: #e0e0e0;
+  }
+  .container {
+      width: 80%;
+      margin: auto;
+  }
+}
+
+/* Estilo para pantallas medianas, por ejemplo, tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+      background-color: #d0d0d0;
+  }
+  .container {
+      width: 90%;
+      margin: auto;
+  }
+}
+
+/* Estilo para pantallas pequeñas, por ejemplo, teléfonos móviles */
+@media (max-width: 767px) {
+  body {
+      background-color: #c0c0c0;
+  }
+  .container {
+      width: 100%;
+      margin: 0;
+      padding: 0 10px;
   }
 }
