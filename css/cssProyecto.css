@@ -67,9 +67,9 @@ input[type="password"] {
 
 /* Botones */
 button {
-  background-color: darkgoldenrod;
+  background-color: black;
   color: #fff;
-  padding: 12px 24px;
+  padding: 12px 2px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -78,13 +78,15 @@ button {
 }
 
 button:hover {
-  background-color: #c59a2e;
+  background-color: white;
+  text-shadow: 0 0 5px #222121, 0 0 10px #1f1e1e, 0 0 20px #2e2e2e;
   transform: scale(1.05);
 }
 
 /* Mensaje de Error */
 #error-message {
-  color: #e74c3c;
+  color: #ff0000;
+  
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
@@ -148,7 +150,7 @@ body {
 
 /* Logo */
 .navbar .logo img {
-  height: 115px;
+  height: 100px;
 }
 
 /* Enlaces de navegación */

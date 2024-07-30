@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("login-form");
     const errorMessage = document.getElementById("error-message");
 
-    //crea un array vacio
-    const users = JSON.parse(localStorage.getItem("users")) || []; 
+    // Crea un array vacío si no existe en localStorage
+    if (!localStorage.getItem("users")) {
+        localStorage.setItem("users", JSON.stringify([]));
+    }
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -11,41 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        if (email.trim() === "" || password.trim() === "") {
-            errorMessage.textContent = "Por favor, completa todos los campos.";
-            return;
+        let users = JSON.parse(localStorage.getItem("users")); 
+        
+        const user = users.find(user => user.email === email && user.password === password);
+
+        if (user) {
+            alert("Inicio de Sesión correcto");
+            window.location.href = 'PAGINA.HTML'; // Corregido 'indow' a 'window'
+        } else {
+            alert("Email o contraseña incorrectos");
+            errorMessage.textContent = "Email o contraseña incorrectos"; // Muestra mensaje de error en el elemento
         }
 
-        const userExists = users.some(function (user) {
-            return user.email === email;
-        });
-
-        if (userExists) {
-            errorMessage.textContent = "Iniciaste seccion.";
-            return;
-        }
-
-        const userData = {
-            email: email,
-            password: password
-        };
-        users.push(userData);
-
-        localStorage.setItem("users", JSON.stringify(users));
-
-        alert("¡Inicio con exitoso para el usuario: " + "!");
-
-        errorMessage.textContent = "";
         form.reset();
     });
-})
-
-
-
-
-
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
 });
-

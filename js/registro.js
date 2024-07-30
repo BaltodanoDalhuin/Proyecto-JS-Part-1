@@ -35,8 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         alert("¡Registro exitoso para usuario: " + "!");
 
+        window.location.href = 'login.html'
+
         errorMessage.textContent = "";
         form.reset();
+
+
     });
 })
 
