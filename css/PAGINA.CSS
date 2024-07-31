@@ -1,6 +1,5 @@
 /* Estilo general para el body */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
     background: linear-gradient(135deg, #121212, #1a1a1a);
     color: #e0e0e0;
     margin: 0;
@@ -32,7 +31,6 @@ form {
     border: 1px solid #333;
     position: relative;
     overflow: hidden;
-    
 }
 
 form::before {
@@ -42,7 +40,7 @@ form::before {
     left: -10px;
     width: calc(100% + 20px);
     height: calc(100% + 20px);
-    background: radial-gradient(circle, rgba(0,0,0,0.5), rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 70%);
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;
@@ -53,26 +51,16 @@ form > * {
     z-index: 1;
 }
 
-
-
-
-.gestion-de-tareas{
-
-display: grid;
-grid-template-columns: auto auto;
-
+/* Estilo para las secciones de formulario */
+.gestion-de-tareas {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-
-
-.form-section{
+.form-section, .form-section1 {
     margin-right: 100px;
 }
 
-.form-section1{
-    
-    margin-right: 100px;
-}
 /* Estilo para los inputs */
 input[type="text"],
 input[type="email"],
@@ -105,14 +93,12 @@ button {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-   background-color: black;
-   color: white;
+    background-color: black;
+    color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
 }
-
-
 
 /* Estilo para la lista */
 ul {
@@ -166,8 +152,8 @@ li:hover {
 
 /* Estilo para el botón de edición */
 .edit-btn {
-    background: black
-    color(white)
+    background: black;
+    color: white;
 }
 .edit-btn:hover {
     background: linear-gradient(45deg, #0056b3, #007bff);
@@ -177,8 +163,8 @@ li:hover {
 
 /* Estilo para el botón de eliminación */
 .delete-btn {
-    background: black
-    color(white)
+    background: black;
+    color: white;
 }
 .delete-btn:hover {
     background: linear-gradient(45deg, #c82333, #dc3545);
@@ -186,16 +172,15 @@ li:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-
-
-/* Estilo general para el formulario */
+/* Estilo general para los formularios de grupo */
 .form-group {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
     background-color: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* Estilo para las etiquetas */
@@ -207,11 +192,11 @@ li:hover {
     font-weight: bold;
 }
 
-/* Estilo para los inputs */
+/* Estilo para los inputs dentro de los formularios de grupo */
 .form-group input[type="text"],
 .form-group input[type="date"],
 .form-group input[type="time"] {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -247,28 +232,14 @@ form {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para los botones (si los hubiera) */
-button {
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo para el botón principal */
+/* Estilo para los botones principales */
 button.primary {
     background-color: black;
     color: white;
     border: 2px solid transparent;
 }
 
-
-
-
-
+/* Estilo para las cartas */
 .card {
     width: 18rem;
     border: 1px solid #ddd;
@@ -276,34 +247,34 @@ button.primary {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-img-top {
+}
+
+.card-img-top {
     width: 100%;
     height: auto;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     padding: 1rem;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
     font-weight: bold;
-    color: #333;
-  }
-  
-  .card-text {
+    color: #ffffff;
+}
+
+.card-text {
     margin-bottom: 1rem;
-    color: #666;
-  }
-  
-  .btn {
+    color: #ffffff;
+}
+
+.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -312,19 +283,14 @@ button.primary {
     text-decoration: none;
     white-space: nowrap;
     border: 1px solid transparent;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-primary1 {
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
+}
+
+

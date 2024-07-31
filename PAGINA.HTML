@@ -30,24 +30,44 @@
                     </div>
                     <button type="submit" class="primary">Agregar Evento</button>
                 </form>
+
+                
             </section>
-
-
-        <section class="form-section">
-          <h2>Crear Tarea</h2>
-          <form id="taskForm">
-            <div class="form-group">
-              <label for="taskTitle">Título de la Tarea:</label>
-              <input
-                type="text"
-                id="taskTitle"
-                placeholder="Título de la Tarea"
-                required
-              />
-            </div>
-            <button type="submit">Agregar Tarea</button>
-          </form>
-        </section>
+            <section class="form-section">
+              <h2>Crear Tarea</h2>
+              <form id="taskForm">
+                <div class="form-group">
+                  <label for="taskTitle">Título de la Tarea:</label>
+                  <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Título de la Tarea"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="taskDifficulty">Dificultad de la Tarea:</label>
+                  <select id="taskDifficulty" required>
+                    <option value="">Selecciona la dificultad</option>
+                    <option value="Facil">Fácil</option>
+                    <option value="Internedio">Internedio</option>
+                    <option value="Difícil">Difícil</option>
+                  </select>
+                </div>
+                <button type="submit">Agregar Tarea</button>
+              </form>
+            </section>
+            
+            <section class="list-section">
+              <h2>Eventos</h2>
+              <ul id="eventList" class="item-list"></ul>
+            </section>
+            
+            <section class="list-section">
+              <h2>Tareas</h2>
+              <ul id="taskList" class="item-list"></ul>
+            </section>
+            
       </div>
       <section class="list-section">
         <h2>Eventos</h2>
@@ -72,7 +92,7 @@
     <div class="card" style="width: 18rem;">
       <img src="/IMG/imgForrest3.jpg" class="card-img-top" alt="imgcarta">
       <div class="card-body">
-        <h5 class="card-title">¡No olviden que¡</h5>
+        <h5 class="card-title">-Forrest Gump-</h5>
         <p class="card-text">«Mi madre decía que hay que dejar atrás el pasado antes de seguir adelante»</p>
        
       </div>
