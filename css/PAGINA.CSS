@@ -16,7 +16,6 @@ h1, h2 {
     font-weight: bold;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     font-size: 2.5em; /* Tamaño más grande para mayor impacto */
-    text-align: center;
 }
 
 /* Estilo para el formulario */
@@ -122,6 +121,7 @@ li {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
     position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
 li:hover {
@@ -292,5 +292,70 @@ button.primary {
     background-color: #007bff;
     border-color: #007bff;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em; /* Reduce el tamaño del texto en pantallas más pequeñas */
+    }
+
+    .gestion-de-tareas {
+        grid-template-columns: auto; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+
+    .form-section, .form-section1 {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    }
+
+    form {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    li {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start;
+    }
+
+    .button-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        gap: 8px; /* Reduce el espacio entre botones en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {}
+    button {
+        padding: 10px 20px; /* Reduce el padding de los botones en pantallas más pequeñas */
+        font-size: 14px; /* Reduce el tamaño de la fuente de los botones en pantallas más pequeñas */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        padding: 8px; /* Reduce el padding de los inputs en pantallas más pequeñas */
+        font-size: 14px; /* Reduce el tamaño de la fuente de los inputs en pantallas más pequeñas */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="time"] {
+        width: 100%; /* Ajusta el ancho de los inputs al 100% en pantallas más pequeñas */
+    }
+
+    .card {
+        width: 100%; /* Ajusta el ancho de las cartas al 100% en pantallas más pequeñas */
+    }
+
+    .card-body {
+        padding: 0.5rem; /* Reduce el padding de las cartas en pantallas más pequeñas */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Reduce el tamaño de la fuente de las cartas en pantallas más pequeñas */
+    }
+
+    .card-text {
+        font-size: 0.875rem; 
+    }
+        /* Reduce el tamaño de la fuente de las cartas en pantallas más pequeñas
 
 
